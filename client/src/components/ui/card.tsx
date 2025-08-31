@@ -1,4 +1,4 @@
-import * as React from "react"
+client/src/components/ui/import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
