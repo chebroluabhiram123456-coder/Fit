@@ -1,3 +1,28 @@
-git add codemagic.yaml
-git commit -m 'Add first workflow'
-git push
+workflows:
+  flutter-android-v2:
+    name: Flutter Android V2 Build
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      android:
+        build_tools: 34.0.0
+        api_level: 34
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Clean previous builds
+        script: |
+          flutter clean
+      - name: Build AppBundle
+        script: |
+          flutter build appbundle --release
+    artifacts:
+      - build/app/outputs/bundle/release/app-release.aab
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        on_success: always
+        on_failure: always
