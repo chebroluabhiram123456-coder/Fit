@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 8a9542b16c8c7a7dd41d2c4d6b548ea2ee31777f abmfp2 <47057699-abmfp2@users.noreply.replit.com> 1756556403 +0000	commit (initial): Initial commit
+8a9542b16c8c7a7dd41d2c4d6b548ea2ee31777f fea3136d86b6554cdf76a5901badab37a7571385 abmfp2 <47057699-abmfp2@users.noreply.replit.com> 1756557187 +0000	commit: Set up the project structure and initial UI components for the fitness app
+fea3136d86b6554cdf76a5901badab37a7571385 74c16431d2656808798cf474ab9555f19d576107 abmfp2 <47057699-abmfp2@users.noreply.replit.com> 1756626533 +0000	commit: Update project configuration to run the development server
+74c16431d2656808798cf474ab9555f19d576107 df99d2de94e4f1c6708ab9ee43dd3e3033482067 abmfp2 <47057699-abmfp2@users.noreply.replit.com> 1756627111 +0000	commit: Introduce Flutter version of the FitTracker app with core features

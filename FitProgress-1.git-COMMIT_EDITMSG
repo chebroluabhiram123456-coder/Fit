@@ -1,0 +1,7 @@
+Introduce Flutter version of the FitTracker app with core features
+
+This commit introduces the initial Flutter implementation of the FitTracker app, including user authentication, exercise management, workout planning, and progress tracking. It sets up the project structure, defines models, and integrates with the backend API.
+
+Replit-Commit-Author: Agent
+Replit-Commit-Session-Id: 0e9e9539-4fb7-4d43-bef3-a79992cbd5c3
+Replit-Commit-Checkpoint-Type: full_checkpoint
