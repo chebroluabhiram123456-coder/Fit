@@ -10,23 +10,19 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
-          cd flutter
           flutter pub get
       - name: Clean previous builds
         script: |
-          cd flutter
           flutter clean
       - name: Build Release AppBundle (.aab)
         script: |
-          cd flutter
           flutter build appbundle --release
       - name: Build Debug APK (.apk)
         script: |
-          cd flutter
           flutter build apk --debug
     artifacts:
-      - flutter/build/app/outputs/bundle/release/app-release.aab
-      - flutter/build/app/outputs/flutter-apk/app-debug.apk
+      - build/app/outputs/bundle/release/app-release.aab
+      - build/app/outputs/flutter-apk/app-debug.apk
     publishing:
       email:
         recipients:
