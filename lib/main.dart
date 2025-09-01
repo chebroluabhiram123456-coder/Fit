@@ -51,7 +51,7 @@ class FitTrackerApp extends StatelessWidget {
       initialLocation: authProvider.isAuthenticated ? '/home' : '/login',
       redirect: (context, state) {
         final isAuthenticated = authProvider.isAuthenticated;
-        final isLoggingIn = state.fullPath == '/login' || state.fullPath == '/register';
+        final isLoggingIn = state.uri.toString() == '/login' || state.uri.toString() == '/register';
 
         if (!isAuthenticated && !isLoggingIn) {
           return '/login';
@@ -64,41 +64,50 @@ class FitTrackerApp extends StatelessWidget {
       routes: [
         GoRoute(
           path: '/login',
-          builder: (context, state) => const LoginScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: LoginScreen()),
         ),
         GoRoute(
           path: '/register',
-          builder: (context, state) => const RegisterScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: RegisterScreen()),
         ),
         GoRoute(
           path: '/home',
-          builder: (context, state) => const HomeScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: HomeScreen()),
         ),
         GoRoute(
           path: '/exercises',
-          builder: (context, state) => const ExerciseLibraryScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: ExerciseLibraryScreen()),
         ),
         GoRoute(
           path: '/create-exercise',
-          builder: (context, state) => const CreateExerciseScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: CreateExerciseScreen()),
         ),
         GoRoute(
           path: '/weekly-plan',
-          builder: (context, state) => const WeeklyPlanScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: WeeklyPlanScreen()),
         ),
         GoRoute(
           path: '/workout/:planId',
-          builder: (context, state) => WorkoutSessionScreen(
-            planId: state.pathParameters['planId']!,
-          ),
+          pageBuilder: (context, state) {
+            final planId = state.pathParameters['planId']!;
+            return MaterialPage(child: WorkoutSessionScreen(planId: planId));
+          },
         ),
         GoRoute(
           path: '/profile',
-          builder: (context, state) => const ProfileScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: ProfileScreen()),
         ),
         GoRoute(
           path: '/progress',
-          builder: (context, state) => const ProgressScreen(),
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: ProgressScreen()),
         ),
       ],
     );
