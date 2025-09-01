@@ -1,36 +1,12 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("dev.flutter.flutter-gradle-plugin")
+    id("com.android.application") version "8.3.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.24" apply false
+    id("dev.flutter.flutter-gradle-plugin") apply false
 }
 
-android {
-    namespace = "com.example.fit_tracker"
-    compileSdk = 34
-
-    defaultConfig {
-        applicationId = "com.example.fit_tracker"
-        minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
     }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-}
-
-flutter {
-    source = "../.."
-}
-
-dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24")
 }
