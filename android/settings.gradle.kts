@@ -5,9 +5,10 @@ pluginManagement {
         gradlePluginPortal()
     }
     plugins {
-        id("com.android.application") version "8.6.0"
-        id("com.android.library") version "8.6.0"
-        id("org.jetbrains.kotlin.android") version "1.9.24"
+        id("com.android.application") version "8.7.0"
+        id("com.android.library") version "8.7.0"
+        id("org.jetbrains.kotlin.android") version "2.0.20"
+        id("dev.flutter.flutter-gradle-plugin") version "1.0.0"
     }
 }
 
@@ -18,8 +19,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-includeBuild("../flutter/packages/flutter_tools/gradle")
 
 rootProject.name = "FitQuest"
 include(":app")
