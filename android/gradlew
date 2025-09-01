@@ -25,7 +25,7 @@ while [ -h "$PRG" ] ; do
 done
 
 SAVED="$(pwd)"
-cd "$(dirname \"$PRG\")/" >/dev/null
+cd "$(dirname "$PRG")/" >/dev/null
 APP_HOME="$(pwd -P)"
 cd "$SAVED" >/dev/null
 
@@ -70,5 +70,4 @@ if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
   cd "$(dirname "$0")"
 fi
 
-exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"￼Enter file contents here
- 
+exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
