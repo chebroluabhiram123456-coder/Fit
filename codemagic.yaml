@@ -1,6 +1,7 @@
 workflows:
   flutter-android-v2:
     name: Flutter Android V2 Build
+    max_build_duration: 60
     environment:
       flutter: stable
       xcode: latest
@@ -11,15 +12,23 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
+          cd flutter
           flutter pub get
       - name: Clean previous builds
         script: |
+          cd flutter
           flutter clean
-      - name: Build AppBundle
+      - name: Build Release AppBundle (.aab)
         script: |
+          cd flutter
           flutter build appbundle --release
+      - name: Build Debug APK (.apk)
+        script: |
+          cd flutter
+          flutter build apk --debug
     artifacts:
-      - build/app/outputs/bundle/release/app-release.aab
+      - flutter/build/app/outputs/bundle/release/app-release.aab
+      - flutter/build/app/outputs/flutter-apk/app-debug.apk
     publishing:
       email:
         recipients:
