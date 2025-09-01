@@ -1,12 +1,11 @@
 // Top-level build.gradle.kts
 
 plugins {
-    // No application plugin here, only dependencies for build system
-    id("com.android.application") version "8.3.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.24" apply false
-    id("dev.flutter.flutter-gradle-plugin") apply false
+    id("com.android.application") version "8.10.2" apply false
+    id("org.jetbrains.kotlin.android") version "2.0.20" apply false
+    id("dev.flutter.flutter-gradle-plugin") version "1.0.0" apply false
 }
 
-tasks.register("clean", Delete::class) {
+task<Delete>("clean") {
     delete(rootProject.buildDir)
 }
