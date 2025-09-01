@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.fit_tracker"
+    namespace = "com.fitquest.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.fit_tracker"
+        applicationId = "com.fitquest.app"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -27,12 +27,7 @@ android {
     }
 }
 
-flutter {
-    source = "../.."
-}
-
 dependencies {
-    // Do NOT hardcode kotlin-stdlib, the plugin provides it
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
