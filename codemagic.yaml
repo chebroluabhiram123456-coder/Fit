@@ -6,9 +6,7 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      android:
-        build_tools: 34.0.0
-        api_level: 34
+      java: 17
     scripts:
       - name: Install dependencies
         script: |
@@ -33,5 +31,3 @@ workflows:
       email:
         recipients:
           - your-email@example.com
-        on_success: always
-        on_failure: always
