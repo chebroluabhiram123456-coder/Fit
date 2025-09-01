@@ -19,5 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
+includeBuild("../flutter/packages/flutter_tools/gradle")
+
 rootProject.name = "FitQuest"
 include(":app")
