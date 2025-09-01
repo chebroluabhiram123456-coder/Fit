@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace = "com.fitquest.app"
+    namespace = "com.example.fit_tracker"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.fitquest.app"
+        applicationId = "com.example.fit_tracker"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
 
     buildTypes {
@@ -24,11 +24,20 @@ android {
                 "proguard-rules.pro"
             )
         }
+        debug {
+            // optional debug configs
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
-dependencies {
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
+flutter {
+    source = "../.."
 }
