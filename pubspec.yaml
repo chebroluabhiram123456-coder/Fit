@@ -24,22 +24,25 @@ dependencies:
   # Glassmorphism UI effects
   glassmorphism: ^3.0.0
 
-  # Optional: HTTP requests (if your app uses APIs)
+  # HTTP requests
   http: ^1.1.1
 
-  # Optional: JSON parsing helper
-  json_annotation: ^6.6.0
+  # JSON annotation for serializable models
+  json_annotation: ^6.5.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^2.0.1
+
+  # JSON code generation
   build_runner: ^2.5.0
-  json_serializable: ^6.7.0
+  json_serializable: ^6.6.1
 
 flutter:
   uses-material-design: true
 
-  # Optional: Add assets if your app has images
+  # Optional: Add assets folder if you have images
   assets:
     - assets/images/
